@@ -82,6 +82,10 @@ To append to a list, use `A`. Use `yAi;` to append `i` to `y`.
 
 Use `W` to exclude all instances of an element from a list. Use `lWx;` to remove all `x`s from `l`
 
+#### Prime
+
+Use `P` to test if a number is prime. Use it as a function: `P(i)`. No semicolon needed.
+
 ### Operations
 
 You can use the following operations in Numlang:
