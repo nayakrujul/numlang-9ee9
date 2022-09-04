@@ -72,7 +72,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
             while code[index] != ';':
                 z += code[index]
                 index += 1
-            if eval(z, locals()):
+            if eval(z, {**locals(), **{'P': lambda _: all(_%d for d in range(2,_))}}):
                 z = ''
                 index += 1
                 while code[index] != ';':
