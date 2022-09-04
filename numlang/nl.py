@@ -99,4 +99,4 @@ def from_console():
                                      description ='Run NumLang code using the numlang command')
     parser.add_argument('code', metavar ='code', type=str, nargs=1, help= 'The NumLang code to run')
     args = parser.parse_args()
-    run_interface(args.code[0])
+    print(run_interface(args.code[0]))
