@@ -66,6 +66,21 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
             if c == 'F':
                 last_list = 'l'
                 l = factors.copy()
+        elif c == '?':
+            z = ''
+            index += 1
+            while code[index] != ';':
+                z += code[index]
+                index += 1
+            if eval(z, locals()):
+                z = ''
+                index += 1
+                while code[index] != ';':
+                    z += code[index]
+                    index += 1
+                    if index >= len(code):
+                        break
+                eval(z, locals())
         elif c == '{':
             z = ''
             index += 1
