@@ -91,3 +91,10 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
     return eval(str(last_var), locals())
   
 run_interface = lambda code_to_run: run(code_to_run)
+
+def from_console():
+    parser = argparse.ArgumentParser(prog ='numlang',
+                                     description ='Run NumLang code using the numlang command')
+    parser.add_argument('code', metavar ='code', type=str, nargs=1, help= 'The NumLang code to run')
+    args = parser.parse_args()
+    run_interface(args.code[0])
