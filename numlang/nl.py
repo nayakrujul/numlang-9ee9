@@ -84,7 +84,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
                 index += 1
                 if index >= len(code):
                     break
-            last_var = eval(z, locals())
+            last_var = eval(z.replace('/', '//').replace('^', '**'), locals())
         elif c in 'xin':
             last_int = last_var = c
         elif c in 'yl':
