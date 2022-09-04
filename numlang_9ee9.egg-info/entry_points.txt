@@ -1,0 +1,3 @@
+[console_scripts]
+numlang = numlang.nl:from_console
+

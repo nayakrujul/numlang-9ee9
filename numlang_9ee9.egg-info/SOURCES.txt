@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+numlang/__init__.py
+numlang/nl.py
+numlang_9ee9.egg-info/PKG-INFO
+numlang_9ee9.egg-info/SOURCES.txt
+numlang_9ee9.egg-info/dependency_links.txt
+numlang_9ee9.egg-info/entry_points.txt
+numlang_9ee9.egg-info/top_level.txt
