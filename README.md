@@ -92,3 +92,10 @@ You can use the following operations in Numlang:
 * `/` (integer division / floor division) - e.g. `i/x;`
 * `^` (exponentiation / power) - e.g. `i^x;`
 * `%` (modulus / remainder) - e.g. `i%x;`
+
+### Conditions
+
+In Numlang conditions take the form `?cond;if_true;`.
+
+An example program is `#R100;{?i%x;i;}`.
+It will go through the numbers from 0 to 99, and print those which are multiples of the user input.
