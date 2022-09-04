@@ -4,7 +4,7 @@ long_description = 'A very concise language for handling numbers - read the docs
 
 setup(
   name = 'numlang-9ee9',
-  version = '0.2',
+  version = '1.0',
   license='Apache',
   description = 'A very concise language for handling numbers.',
   author = 'Rujul Nayak',
