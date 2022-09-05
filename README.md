@@ -80,11 +80,27 @@ To append to a list, use `A`. Use `yAi;` to append `i` to `y`.
 
 #### Without
 
-Use `W` to exclude all instances of an element from a list. Use `lWx;` to remove all `x`s from `l`
+Use `W` to exclude all instances of an element from a list. Use `lWx;` to remove all `x`s from `l`.
 
-#### Prime
+#### Sort
+
+Use `S` to sort a list. Use `lS` to sort `l`.
+
+#### Deduplicate
+
+To remove duplicates, use `D`. Use `lD` to deduplicate `l`.
+
+#### Is Prime
 
 Use `P` to test if a number is prime. Use it as a function: `P(i)`. No semicolon needed.
+
+#### Primes
+
+Use `R` to get prime numbers. Use `Ri;` to get the first `i` primes.
+
+#### Mersenne primes
+
+Use `M` to get Mersenne primes. Use `Mi;` to get the first `i` Mersenne primes.
 
 ### Operations
 
