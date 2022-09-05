@@ -14,6 +14,25 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
         elif c == '$':
             y = [int(_) for _ in input().split()]
             last_list = last_var = 'y'
+        elif c == 'S':
+            if last_list == 'l':
+                l.sort()
+            else:
+                y.sort()
+            last_var = last_list
+        elif c == 'D':
+            unique = []
+            if last_list == 'l':
+                for item in l:
+                    if item not in unique:
+                        unique.append(item)
+                l = unique.copy()
+            else:
+                for item in y:
+                    if item not in unique:
+                        unique.append(item)
+                y = unique.copy()
+            last_var = last_list
         elif c == 'A':
             z = ''
             index += 1
@@ -66,6 +85,44 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
             if c == 'F':
                 last_list = 'l'
                 l = factors.copy()
+        elif c in 'Rr':
+            z = ''
+            index += 1
+            while code[index] != ';':
+                z += code[index]
+                index += 1
+                if index >= len(code):
+                    break
+            num = eval(z, locals())
+            primes = []
+            _ = 2
+            while len(primes) < num:
+                if all(_%d for d in range(2,_)):
+                    primes.append(_)
+            last_var = str(primes)
+            if c == 'F':
+                last_list = 'l'
+                l = primes.copy()
+        elif c in 'Mm':
+            z = ''
+            index += 1
+            while code[index] != ';':
+                z += code[index]
+                index += 1
+                if index >= len(code):
+                    break
+            num = eval(z, locals())
+            primes = []
+            _ = 1
+            while len(primes) < num:
+                _ += 1
+                m = 2**_ - 1
+                if all(m%k for k in range(2,m)):
+                    primes.append(m)
+            last_var = str(primes)
+            if c == 'M':
+                last_list = 'l'
+                l = primes.copy()
         elif c == '?':
             z = ''
             index += 1
@@ -80,7 +137,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
                     index += 1
                     if index >= len(code):
                         break
-                eval(z, locals())
+                last_var = eval(z, locals())
         elif c == '{':
             z = ''
             index += 1
