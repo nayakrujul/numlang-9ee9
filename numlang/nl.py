@@ -1,4 +1,4 @@
-import argparse
+import argparse, math
 
 def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', last_var='l'):
     if y is None:
@@ -71,6 +71,8 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
                 if index >= len(code):
                     break
             last_var = str(list(range(eval(z, locals()))))
+        elif c == 'O':
+            print(last_var)
         elif c in 'Ff':
             z = ''
             index += 1
@@ -123,6 +125,32 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
             if c == 'M':
                 last_list = 'l'
                 l = primes.copy()
+        elif c in 'Gg':
+            z = ''
+            index += 1
+            while code[index] != ';':
+                z += code[index]
+                index += 1
+                if index >= len(code):
+                    break
+            lst = eval(z, locals())
+            last_var = math.gcd(*lst)
+            if c == 'G':
+                last_int = 'n'
+                n = last_var
+        elif c in 'Ll':
+            z = ''
+            index += 1
+            while code[index] != ';':
+                z += code[index]
+                index += 1
+                if index >= len(code):
+                    break
+            lst = eval(z, locals())
+            last_var = math.lcm(*lst)
+            if c == 'L':
+                last_int = 'n'
+                n = last_var
         elif c == '?':
             z = ''
             index += 1
