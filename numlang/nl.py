@@ -138,7 +138,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
             if c == 'G':
                 last_int = 'n'
                 n = last_var
-        elif c in 'Ll':
+        elif c in 'Cc':
             z = ''
             index += 1
             while code[index] != ';':
@@ -148,7 +148,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
                     break
             lst = eval(z, locals())
             last_var = math.lcm(*lst)
-            if c == 'L':
+            if c == 'C':
                 last_int = 'n'
                 n = last_var
         elif c == '?':
