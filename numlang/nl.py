@@ -72,7 +72,7 @@ def run(code, *, x=0, y=None, i=0, l=None, n=0, last_int='n', last_list='l', las
                     break
             last_var = str(list(range(eval(z, locals()))))
         elif c == 'O':
-            print(eval(last_var, locals()))
+            print(eval(str(last_var), locals()))
         elif c in 'Ff':
             z = ''
             index += 1
