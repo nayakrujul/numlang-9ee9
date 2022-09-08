@@ -102,6 +102,14 @@ Use `R` to get prime numbers. Use `Ri;` to get the first `i` primes.
 
 Use `M` to get Mersenne primes. Use `Mi;` to get the first `i` Mersenne primes.
 
+#### GCD
+
+The `G` method is for getting the GCD of a list of numbers. Use `Gl;` to get the GCD of all the elements of `l`.
+
+#### LCM
+
+The `C` method is for getting the LCM of a list of numbers. Use `Cl;` to get the GCD of all the elements of `l`.
+
 ### Operations
 
 You can use the following operations in Numlang:
